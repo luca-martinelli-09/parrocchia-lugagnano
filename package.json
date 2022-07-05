@@ -1,0 +1,28 @@
+{
+  "name": "parrocchia-lugagnano",
+  "version": "1.0.0",
+  "description": "Sito web della Parrocchia di Lugagnano",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i css/main_raw.css -o css/main.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luca-martinelli-09/parrocchia-lugagnano.git"
+  },
+  "keywords": [
+    "parrocchia",
+    "lugagnano",
+    "noi"
+  ],
+  "author": "Luca Martinelli",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/luca-martinelli-09/parrocchia-lugagnano/issues"
+  },
+  "homepage": "https://github.com/luca-martinelli-09/parrocchia-lugagnano#readme",
+  "dependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}
