@@ -1,0 +1,32 @@
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  title Parrocchia di Lugagnano
+
+  script(src="https://cdn.tailwindcss.com")
+
+  script(src="js/tailwind.js") 
+
+  link(rel="stylesheet" href="/css/main.css")
+
+  link(rel="icon" href="favicon.png" type="image/png")
+body
+  header
+    nav#navbar
+      #open-menu
+        <ion-icon id="menu-icon" name="menu-outline"></ion-icon>
+        span Parrocchia di Lugagnano
+        img(src="res/logo/logo.svg" class="h-8" alt="Parrocchia di Lugagnano")
+      ul
+        li
+          a(href="/") Home
+        li
+          a(href="/storia") Storia
+        li.logo
+          img(src="res/logo/logo.svg" alt="Parrocchia di Lugagnano")
+        li
+          a(href="/attivita") Attività
+        li
+          a(href="/gruppi") Gruppi

@@ -1,0 +1,284 @@
+@import url("http://fonts.cdnfonts.com/css/recoleta");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+  @apply flex items-center fixed top-0 inset-x-0 z-10;
+}
+
+nav {
+  @apply text-white font-bold text-lg flex flex-1 flex-col md:flex-row justify-center items-end md:items-center md:transition-colors md:duration-300;
+}
+
+nav > ul {
+  @apply hidden md:flex flex-col md:flex-row
+    md:gap-16 md:h-16 w-full md:w-auto
+    justify-center items-center
+    pb-4 md:pb-0
+    bg-white text-black md:bg-transparent md:text-current;
+}
+
+nav.opened > ul {
+  @apply flex;
+}
+
+nav > ul > li:not(.logo) {
+  @apply flex items-center w-full md:w-auto;
+}
+
+nav > ul > li > a {
+  @apply hover:underline w-full md:w-auto text-center py-2 md:py-0;
+}
+
+nav .logo {
+  @apply hidden md:flex p-2 pb-4 bg-white h-28;
+}
+
+nav.scroll,
+nav.opened {
+  @apply bg-white text-black shadow-lg;
+}
+
+nav.opened:not(.scroll) {
+  @apply md:bg-transparent md:text-white;
+}
+
+nav.scroll .logo {
+  @apply shadow-lg;
+}
+
+#open-menu {
+  @apply md:hidden text-4xl p-3 flex gap-3 items-center w-full flex-row-reverse justify-between;
+}
+
+#open-menu span,
+#open-menu img {
+  @apply text-base font-normal hidden;
+}
+
+nav.opened #open-menu span,
+nav.opened #open-menu img,
+nav.scroll #open-menu span,
+nav.scroll #open-menu img {
+  @apply block;
+}
+
+section.hero {
+  @apply min-h-[50vh] md:min-h-[75vh] relative flex flex-col;
+}
+
+section.hero > img {
+  @apply absolute h-full w-full object-cover object-center z-0;
+}
+
+section.hero > .hero-content {
+  @apply relative flex flex-1 justify-center items-center px-5 py-24 md:pt-48 bg-black bg-opacity-60;
+}
+
+.hero-content h1 {
+  @apply text-white text-5xl md:text-6xl font-serif text-center;
+}
+
+.hero-content h5 {
+  @apply text-white text-3xl font-serif;
+}
+
+.card {
+  @apply flex flex-col gap-3;
+}
+
+.card.bordered {
+  @apply border border-gray-300 p-5;
+}
+
+.card.bordered.highlighted {
+  @apply border-l-4 border-l-[#cf9b2a];
+}
+
+.card > .title {
+  @apply font-serif text-2xl;
+}
+
+.card > .suptitle {
+  @apply text-sm opacity-80;
+}
+
+section:not(.hero) {
+  @apply max-w-7xl mx-auto p-3 py-8;
+}
+
+section > .section-title {
+  @apply font-serif text-4xl font-bold;
+}
+
+.button {
+  @apply inline-flex flex-row gap-2 items-center justify-center bg-[#cf9b2a] text-white px-5 py-2 hover:bg-[#c98f10] transition-colors;
+}
+
+footer {
+  @apply mt-9 py-5 bg-[#373356] text-white;
+}
+
+footer > section > .section-title {
+  @apply font-serif text-2xl font-bold;
+}
+
+table td {
+  @apply py-2;
+}
+
+a.link {
+  @apply bg-yellow-200 px-2 hover:underline;
+}
+
+.section-content .text-content {
+  @apply mt-10 flex flex-col gap-3 text-justify;
+}
+
+/*
+:root {
+    --primary-color: #cf9b2a;
+    --second-color: #312783;
+    --primary-color-glass:
+    rgb(239 183 63 / 20%);
+
+    --primary-color-light: #dba531;
+    --second-color-light: #3949AB;
+
+    --primary-color-bg: #efb73f;
+    --second-color-bg: #303f9f;
+
+    --primary-color-bg-2: #efb73f;
+    --second-color-bg-2: #1A237E;
+
+    --bg-second-color: #fff;
+
+    --border-color: #dadce0;
+
+    --fill-light-color: #fff;
+    --fill-light-color-glass:
+    rgba(255, 255, 255, 0.2);
+    --fill-dark-color: #333;
+    --fill-dark-color-glass:
+    rgba(0, 0, 0, 0.05);
+
+    --light-text-color: #fff;
+    --dark-text-color: #333;
+    --light-dark-text-color: #757575;
+    --light-text-glass:
+    rgba(255, 255, 255, 0.75);
+    --dark-text-glass:
+    rgba(0, 0, 0, 0.05);
+    --dark-text-glass-2:
+    rgba(0, 0, 0, 0.5);
+
+    --input-bg-color: #f4f6f8;
+    --input-bg-color-focus: #fff;
+    --input-border-color: #d1d4d5;
+    --input-border-color-focus: #1cc865;
+    --input-required-color: #f26a6a;
+    --input-text-color: #333;
+    --input-text-color-focus: #333;
+    --button-text-color: #fff;
+    --checkbox-border-color: #676767;
+
+    --bg-gradient:
+    linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-webkit-gradient:
+    -webkit-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-moz-gradient:
+    -moz-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-ms-gradient:
+    -ms-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-o-gradient:
+    -o-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+
+    --bg-gradient-2:
+    linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-webkit-gradient-2:
+    -webkit-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-moz-gradient-2:
+    -moz-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-ms-gradient-2:
+    -ms-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-o-gradient-2:
+    -o-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --accent-primary-color: #f4511e;
+    --accent-second-color: #FFA726;
+
+    --bg-accent-gradient:
+    linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-webkit-accent-gradient:
+    -webkit-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-moz-accent-gradient:
+    -moz-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-ms-accent-gradient:
+    -ms-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-o-accent-gradient:
+    -o-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+
+    --toast-text-color: #fff;
+    --toast-text-glass:
+    rgba(255, 255, 255, 0.75);
+    --toast-act-bg-color:
+    rgba(255, 255, 255, 0.2);
+
+    --normal-toast-color: #202124;
+    --normal-border-color: #202124;
+    --normal-text-color:
+    var(--toast-text-color);
+    --normal-text-glass-color:
+    var(--toast-text-glass);
+    --normal-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --error-toast-color: #b00020;
+    --error-border-color: #b00020;
+    --error-text-color:
+    var(--toast-text-color);
+    --error-text-glass-color:
+    var(--toast-text-glass);
+    --error-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --success-toast-color: #1cc865;
+    --success-border-color: #1cc865;
+    --success-text-color:
+    var(--toast-text-color);
+    --success-text-glass-color:
+    var(--toast-text-glass);
+    --success-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --warning-toast-color: #FF9800;
+    --warning-border-color: #FF9800;
+    --warning-text-color:
+    var(--toast-text-color);
+    --warning-text-glass-color:
+    var(--toast-text-glass);
+    --warning-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --info-toast-color: #fff8ea;
+    --info-border-color: #efb73f;
+    --info-text-color:
+    var(--dark-text-color);
+    --info-text-glass-color:
+    rgba(0, 0, 0, 0.65);
+    --info-bg-glass-color:
+    var(--fill-dark-color-glass);
+
+    --darkyellow-toast-color: #283593;
+    --darkyellow-border-color: #1A237E;
+    --darkyellow-text-color:
+    var(--toast-text-color);
+    --darkyellow-text-glass-color: #fff59d;
+    --darkyellow-text-act-color: #FFEB3B;
+    --darkyellow-bg-glass-color:
+    rgba(255, 249, 196, 0.2);
+
+    --mt-btn-radius: 1000px;
+}*/

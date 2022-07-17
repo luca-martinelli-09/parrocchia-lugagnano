@@ -1,6 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["*.{js,php,html}", "js/**/*.js"],
+tailwind.config = {
   theme: {
     extend: {},
     fontFamily: {
@@ -8,6 +6,5 @@ module.exports = {
       'serif': ['Recoleta', 'serif'],
       'body': ['Montserrat', 'sans-serif']
     }
-  },
-  plugins: [],
+  }
 }
