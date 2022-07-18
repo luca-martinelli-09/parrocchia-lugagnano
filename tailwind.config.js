@@ -6,6 +6,7 @@ module.exports = {
     fontFamily: {
       'sans': ['Montserrat', 'sans-serif'],
       'serif': ['Recoleta', 'serif'],
+      'display': ['Domine', 'serif'],
       'body': ['Montserrat', 'sans-serif']
     }
   },
