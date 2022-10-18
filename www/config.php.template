@@ -1,0 +1,23 @@
+<?php
+
+define('BASE_SITO', '');
+
+define('DB_HOST', '');
+define('DB_USERNAME', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', '');
+
+define('LOGIN_ISCRIZIONI', '');
+define('REGISTER_ISCRIZIONI', '');
+
+function getConn() {
+  $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+  $conn->set_charset('utf8mb4');
+
+  return $conn;
+}
+
+function closeConn($conn) {
+  mysqli_close($conn);
+}

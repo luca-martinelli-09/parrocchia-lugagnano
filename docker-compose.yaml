@@ -1,0 +1,42 @@
+version: "3.8"
+services:
+  php-apache:
+    container_name: php-apache-pdl
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - 8000:80
+    depends_on:
+      - db
+
+  db:
+    container_name: db-pdl
+    image: mysql
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 9906:3306
+    volumes:
+      - ./db:/var/lib/mysql
+
+  phpmyadmin:
+    container_name: phpmyadmin-pdl
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8080:80
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+
+  composer:
+    container_name: composer-pdl
+    image: composer:latest
+    command: [ "composer", "install" ]
+    volumes:
+      - ./www:/app

@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["views/**/*.{js,php,html,pug}", "js/**/*.js"],
+  content: [
+    "./www/*/**.{html,php,js,pug}",
+    './www/components/*.pug',
+    './www/*.pug',
+  ],
+  darkMode: "class",
   theme: {
     extend: {},
     fontFamily: {
@@ -10,5 +15,8 @@ module.exports = {
       'body': ['Montserrat', 'sans-serif']
     }
   },
+  variants: {
+    extend: {},
+  },
   plugins: [],
-}
+};

@@ -1,0 +1,8 @@
+{
+  "require": {
+    "pug-php/pug": "^3.5"
+  },
+  "config": {
+    "allow-plugins": true
+  }
+}

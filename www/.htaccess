@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule (.+) $1.php [L,NC,QSA]

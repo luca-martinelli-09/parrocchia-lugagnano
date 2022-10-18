@@ -1,0 +1,1021 @@
+@import url("https://fonts.cdnfonts.com/css/recoleta");
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat:wght@300;400;500;700&display=swap');
+
+/*
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: Montserrat, sans-serif; /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; /* 1 */
+  background-color: transparent; /* 2 */
+  background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+*, ::before, ::after{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop{
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+.ml-2{
+  margin-left: 0.5rem;
+}
+.mt-5{
+  margin-top: 1.25rem;
+}
+.mt-10{
+  margin-top: 2.5rem;
+}
+.mt-3{
+  margin-top: 0.75rem;
+}
+.mt-8{
+  margin-top: 2rem;
+}
+.mt-4{
+  margin-top: 1rem;
+}
+.flex{
+  display: flex;
+}
+.table{
+  display: table;
+}
+.h-8{
+  height: 2rem;
+}
+.flex-col{
+  flex-direction: column;
+}
+.gap-4{
+  gap: 1rem;
+}
+.gap-8{
+  gap: 2rem;
+}
+.gap-2{
+  gap: 0.5rem;
+}
+.font-display{
+  font-family: Domine, serif;
+}
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.italic{
+  font-style: italic;
+}
+.underline{
+  text-decoration-line: underline;
+}
+
+header{
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+
+  nav{
+    flex-direction: row;
+    align-items: center;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+}
+
+nav > ul{
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+
+  nav > ul{
+    display: flex;
+    height: 4rem;
+    width: auto;
+    flex-direction: row;
+    gap: 4rem;
+    background-color: transparent;
+    padding-bottom: 0px;
+    color: currentColor;
+  }
+}
+
+nav.opened > ul{
+  display: flex;
+}
+
+nav > ul > li:not(.logo){
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 768px){
+
+  nav > ul > li:not(.logo){
+    width: auto;
+  }
+}
+
+nav > ul > li > a{
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+nav > ul > li > a:hover{
+  text-decoration-line: underline;
+}
+
+@media (min-width: 768px){
+
+  nav > ul > li > a{
+    width: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+nav .logo{
+  display: none;
+  width: 6rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px){
+
+  nav .logo{
+    display: flex;
+  }
+}
+
+nav .divider{
+  flex: 1 1 0%;
+}
+
+nav.scroll, 
+nav.opened{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 768px){
+
+  nav.opened:not(.scroll){
+    background-color: transparent;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+#open-menu{
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 768px){
+
+  #open-menu{
+    display: none;
+  }
+}
+
+#open-menu span, 
+#open-menu img{
+  display: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+nav.opened #open-menu span, 
+nav.opened #open-menu img, 
+nav.scroll #open-menu span, 
+nav.scroll #open-menu img{
+  display: block;
+}
+
+section.hero{
+  position: relative;
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+}
+
+@media (min-width: 768px){
+
+  section.hero{
+    min-height: 75vh;
+  }
+}
+
+section.hero > img{
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+section.hero > .hero-content{
+  position: relative;
+  display: flex;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.6;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px){
+
+  section.hero > .hero-content{
+    padding-top: 12rem;
+  }
+}
+
+.hero-content h1{
+  text-align: center;
+  font-family: Recoleta, serif;
+  font-size: 3rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+
+  .hero-content h1{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.hero-content h5{
+  font-family: Recoleta, serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card.bordered{
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  padding: 1.25rem;
+}
+
+.card.bordered.highlighted{
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(207 155 42 / var(--tw-border-opacity));
+}
+
+.card > .title{
+  font-family: Recoleta, serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.card > .suptitle{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  opacity: 0.8;
+}
+
+section:not(.hero){
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding: 0.75rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+section > .section-title{
+  font-family: Recoleta, serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+.button{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 155 42 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.button:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(201 143 16 / var(--tw-bg-opacity));
+}
+
+footer{
+  margin-top: 2.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 51 86 / var(--tw-bg-opacity));
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+footer > section > .section-title{
+  font-family: Recoleta, serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+table td{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+a.link{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+a.link:hover{
+  text-decoration-line: underline;
+}
+
+.section-content .text-content{
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: justify;
+}
+
+/*
+:root {
+    --primary-color: #cf9b2a;
+    --second-color: #312783;
+    --primary-color-glass:
+    rgb(239 183 63 / 20%);
+
+    --primary-color-light: #dba531;
+    --second-color-light: #3949AB;
+
+    --primary-color-bg: #efb73f;
+    --second-color-bg: #303f9f;
+
+    --primary-color-bg-2: #efb73f;
+    --second-color-bg-2: #1A237E;
+
+    --bg-second-color: #fff;
+
+    --border-color: #dadce0;
+
+    --fill-light-color: #fff;
+    --fill-light-color-glass:
+    rgba(255, 255, 255, 0.2);
+    --fill-dark-color: #333;
+    --fill-dark-color-glass:
+    rgba(0, 0, 0, 0.05);
+
+    --light-text-color: #fff;
+    --dark-text-color: #333;
+    --light-dark-text-color: #757575;
+    --light-text-glass:
+    rgba(255, 255, 255, 0.75);
+    --dark-text-glass:
+    rgba(0, 0, 0, 0.05);
+    --dark-text-glass-2:
+    rgba(0, 0, 0, 0.5);
+
+    --input-bg-color: #f4f6f8;
+    --input-bg-color-focus: #fff;
+    --input-border-color: #d1d4d5;
+    --input-border-color-focus: #1cc865;
+    --input-required-color: #f26a6a;
+    --input-text-color: #333;
+    --input-text-color-focus: #333;
+    --button-text-color: #fff;
+    --checkbox-border-color: #676767;
+
+    --bg-gradient:
+    linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-webkit-gradient:
+    -webkit-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-moz-gradient:
+    -moz-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-ms-gradient:
+    -ms-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+    --bg-o-gradient:
+    -o-linear-gradient(to bottom right, var(--second-color-bg), var(--primary-color-bg));
+
+    --bg-gradient-2:
+    linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-webkit-gradient-2:
+    -webkit-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-moz-gradient-2:
+    -moz-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-ms-gradient-2:
+    -ms-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --bg-o-gradient-2:
+    -o-linear-gradient(to bottom right, var(--second-color-bg-2), var(--primary-color-bg-2));
+    --accent-primary-color: #f4511e;
+    --accent-second-color: #FFA726;
+
+    --bg-accent-gradient:
+    linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-webkit-accent-gradient:
+    -webkit-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-moz-accent-gradient:
+    -moz-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-ms-accent-gradient:
+    -ms-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+    --bg-o-accent-gradient:
+    -o-linear-gradient(to bottom right, var(--accent-second-color), var(--accent-primary-color));
+
+    --toast-text-color: #fff;
+    --toast-text-glass:
+    rgba(255, 255, 255, 0.75);
+    --toast-act-bg-color:
+    rgba(255, 255, 255, 0.2);
+
+    --normal-toast-color: #202124;
+    --normal-border-color: #202124;
+    --normal-text-color:
+    var(--toast-text-color);
+    --normal-text-glass-color:
+    var(--toast-text-glass);
+    --normal-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --error-toast-color: #b00020;
+    --error-border-color: #b00020;
+    --error-text-color:
+    var(--toast-text-color);
+    --error-text-glass-color:
+    var(--toast-text-glass);
+    --error-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --success-toast-color: #1cc865;
+    --success-border-color: #1cc865;
+    --success-text-color:
+    var(--toast-text-color);
+    --success-text-glass-color:
+    var(--toast-text-glass);
+    --success-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --warning-toast-color: #FF9800;
+    --warning-border-color: #FF9800;
+    --warning-text-color:
+    var(--toast-text-color);
+    --warning-text-glass-color:
+    var(--toast-text-glass);
+    --warning-bg-glass-color:
+    var(--toast-act-bg-color);
+
+    --info-toast-color: #fff8ea;
+    --info-border-color: #efb73f;
+    --info-text-color:
+    var(--dark-text-color);
+    --info-text-glass-color:
+    rgba(0, 0, 0, 0.65);
+    --info-bg-glass-color:
+    var(--fill-dark-color-glass);
+
+    --darkyellow-toast-color: #283593;
+    --darkyellow-border-color: #1A237E;
+    --darkyellow-text-color:
+    var(--toast-text-color);
+    --darkyellow-text-glass-color: #fff59d;
+    --darkyellow-text-act-color: #FFEB3B;
+    --darkyellow-bg-glass-color:
+    rgba(255, 249, 196, 0.2);
+
+    --mt-btn-radius: 1000px;
+}*/
