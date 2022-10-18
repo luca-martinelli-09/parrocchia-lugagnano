@@ -1,5 +1,6 @@
 {
   "require": {
+    "symfony/var-dumper": "5.4.14",
     "pug-php/pug": "^3.5"
   },
   "config": {
