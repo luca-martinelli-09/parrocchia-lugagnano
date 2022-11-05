@@ -494,14 +494,23 @@ video {
 .h-8{
   height: 2rem;
 }
+.list-inside{
+  list-style-position: inside;
+}
+.list-disc{
+  list-style-type: disc;
+}
+.list-decimal{
+  list-style-type: decimal;
+}
 .flex-col{
   flex-direction: column;
 }
-.gap-4{
-  gap: 1rem;
-}
 .gap-8{
   gap: 2rem;
+}
+.gap-4{
+  gap: 1rem;
 }
 .gap-2{
   gap: 0.5rem;
@@ -544,7 +553,7 @@ nav{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav{
     flex-direction: row;
@@ -568,7 +577,7 @@ nav > ul{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav > ul{
     display: flex;
@@ -592,7 +601,7 @@ nav > ul > li:not(.logo){
   align-items: center;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav > ul > li:not(.logo){
     width: auto;
@@ -610,7 +619,7 @@ nav > ul > li > a:hover{
   text-decoration-line: underline;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav > ul > li > a{
     width: auto;
@@ -627,7 +636,7 @@ nav .logo{
   padding: 0.5rem;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav .logo{
     display: flex;
@@ -649,7 +658,7 @@ nav.opened{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   nav.opened:not(.scroll){
     background-color: transparent;
@@ -670,7 +679,7 @@ nav.opened{
   line-height: 2.5rem;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
 
   #open-menu{
     display: none;

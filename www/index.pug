@@ -28,10 +28,28 @@ html(lang="it")
                 div
                   a.button(href=avviso.Link target="_blank" rel="noopener noreferrer") Apri
     else
-      p Nessun avviso per i prossimi giorni
+      p(class="mt-5") Nessun avviso per i prossimi giorni
+    
+  section
+    h2.section-title "Sui Tuoi Passi"
+
+    if notiziari.length > 0
+      .section-content
+        div(class="mt-5 flex flex-col gap-4")
+
+          each notiziario in notiziari
+            .card.bordered
+              span.suptitle #{notiziario.Mesi}
+              h3.title #{notiziario.Titolo}
+              p Scarica subito il notiziario della Parrocchia di Lugagnano "Sui Tuoi Passi" di #{notiziario.Mesi}
+
+              div
+                a.button(href=notiziario.Link target="_blank" rel="noopener noreferrer") Scarica
+    else
+      p(class="mt-5") Nessun notiziario diponibile al download
 
   section
-    h2.section-title Messe
+    h2.section-title Sante Messe
 
     .section-content
       div(class="mt-10 flex flex-col gap-8")
@@ -58,6 +76,24 @@ html(lang="it")
           p Le messe festive sono disponibili in <strong>diretta streaming</strong> sul canale <strong>YouTube</strong> della Parrocchia di Lugagnano.
           div
             a.button(href="https://www.youtube.com/c/ParrocchiadiLugagnano" target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Guarda ora
+
+  section
+    h2.section-title Confessioni
+
+    .section-content
+      div(class="mt-10 flex flex-col gap-8")
+        .card
+          h3.title Orari
+
+          table
+            tr 
+              td Venerdì
+              td
+                strong dalle 09:00 alle 11:30
+            tr
+              td Sabato
+              td
+                strong dalle 09:00 alle 11:30, dalle 16:30 alle 19:00
 
   section
     h2.section-title Portale iscrizioni
