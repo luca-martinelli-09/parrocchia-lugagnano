@@ -491,6 +491,9 @@ video {
 .table{
   display: table;
 }
+.grid{
+  display: grid;
+}
 .h-8{
   height: 2rem;
 }
@@ -502,6 +505,9 @@ video {
 }
 .list-decimal{
   list-style-type: decimal;
+}
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .flex-col{
   flex-direction: column;
