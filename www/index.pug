@@ -10,14 +10,17 @@ html(lang="it")
       h5 in
         span(class="italic ml-2") Lugagnano
   
-  section
-    h2.section-title Prossimi eventi
+  if eventi.length > 0
+    section
+      h2.section-title Prossimi eventi
 
-    .section-content
-      div(class="mt-10 grid gap-8 grid-cols-3")
-        .card
-          img(class="w-100" src="files/2022-11-16.jpg" alt="Testimonianza")
-          a.button(href="https://youtu.be/aoR30to90eY" target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
+      .section-content
+        div(class="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3")
+          each evento in eventi
+            .card
+              span(class="opacity-80 text-xs")= evento.Giorno
+              img(class="w-100" src=evento.File alt=evento.Giorno)
+              a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
 
   section
     h2.section-title Ultimi avvisi

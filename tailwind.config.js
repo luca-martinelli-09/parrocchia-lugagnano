@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        '3xl': '2400px',
+      }
+    },
     fontFamily: {
       'sans': ['Montserrat', 'sans-serif'],
       'serif': ['Recoleta', 'serif'],

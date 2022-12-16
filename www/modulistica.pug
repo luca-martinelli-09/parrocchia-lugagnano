@@ -9,10 +9,19 @@ html(lang="it")
       h1 Modulistica
 
   section
-    h2.section-title ⚠️ Lavori in corso
+    h2.section-title Battesimo
 
-    .section-content
-      .text-content
-        p Questo sito è ancora in costruzione e la seguente pagina non è ancora stata creata!
+    .section-content      
+      div(class="mt-10 flex flex-col gap-8")
+        .card
+          table
+            tr 
+              td Indicazioni pratiche per il Battesimo
+              td
+                a.button(href="files/modulistica/1. Indicazioni pratiche per il Battesimo.pdf" target="_blank" rel="noopener noreferrer") Scarica
+            tr
+              td Domanda di Battesimo
+              td
+                a.button(href="files/modulistica/2. Domanda di Battesimo.pdf" target="_blank" rel="noopener noreferrer") Scarica
 
   include components/footer.pug

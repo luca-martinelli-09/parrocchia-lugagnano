@@ -41,6 +41,21 @@ foreach (array_slice(array_diff(scandir('./files/notiziari', 1), array('..', '.'
   ];
 }
 
+$eventi = array();
+foreach (array_slice(array_diff(scandir('./files/eventi', 1), array('..', '.')), 0, 3) as $file) {
+  $tokens = explode('_', str_replace('.jpg', '', $file));
+  $day = $tokens[0];
+  $youtubeURI = $tokens[1];
+
+  if (strtotime($day) >= time()) {
+    $eventi[] = [
+      'File' => './files/eventi/' . $file,
+      'Giorno' => (new DateTimeImmutable($day))->format('d/m/Y'),
+      'Link' => 'https://youtu.be/' . $youtubeURI
+    ];
+  }
+}
+
 closeConn($conn);
 
 $pug = new Pug();
@@ -48,6 +63,7 @@ $pug = new Pug();
 $pug->displayFile('index.pug', [
   'avvisi' => $notifications,
   'notiziari' => $notiziari,
+  'eventi' => $eventi,
   'iscrizioni' => [
     'Login' => LOGIN_ISCRIZIONI,
     'Register' => REGISTER_ISCRIZIONI

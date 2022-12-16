@@ -9,10 +9,14 @@ html(lang="it")
       h1 Le attivit<span class="font-display">à</span> parrocchiali
 
   section
-    h2.section-title ⚠️ Lavori in corso
+    h2.section-title Eventi prossimi e passati
 
     .section-content
-      .text-content
-        p Questo sito è ancora in costruzione e la seguente pagina non è ancora stata creata!
+      div(class="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3")
+        each evento in eventi
+          .card
+            span(class="opacity-80 text-xs")= evento.Giorno
+            img(class="w-100" src=evento.File alt=evento.Giorno)
+            a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Streaming
 
   include components/footer.pug
