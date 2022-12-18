@@ -15,7 +15,7 @@ nav {
 
 nav > ul {
   @apply hidden xl:flex flex-col xl:flex-row
-    xl:gap-10 xl:h-16 w-full xl:w-auto
+    xl:gap-6 xl:h-16 w-full xl:w-auto
     justify-end items-center
     pb-4 xl:pb-0
     bg-white text-black xl:bg-transparent xl:text-current;

@@ -17,6 +17,8 @@ html(lang="it")
           .card
             span(class="opacity-80 text-xs")= evento.Giorno
             img(class="w-100" src=evento.File alt=evento.Giorno)
-            a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Streaming
+            
+            if evento.Link
+              a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Streaming
 
   include components/footer.pug

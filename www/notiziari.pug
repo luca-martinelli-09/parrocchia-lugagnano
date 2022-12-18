@@ -1,0 +1,29 @@
+doctype html
+html(lang="it")
+
+  include components/header.pug
+
+  section.hero
+    img(src="res/images/background.webp" alt="Arbor Rendemptionis")
+    .hero-content
+      h1 Notiziari "Sui Tuoi Passi"
+  
+  section
+    h2.section-title Archivio del giornalino parrocchiale "Sui Tuoi Passi"
+
+    if notiziari.length > 0
+      .section-content
+        div(class="mt-5 flex flex-col gap-4")
+
+          each notiziario in notiziari
+            .card.bordered
+              span.suptitle #{notiziario.Mesi}
+              h3.title #{notiziario.Titolo}
+              p Scarica subito il notiziario della Parrocchia di Lugagnano "Sui Tuoi Passi" di #{notiziario.Mesi}
+
+              div
+                a.button(href=notiziario.Link target="_blank" rel="noopener noreferrer") Scarica
+    else
+      p(class="mt-5") Nessun notiziario diponibile al download
+
+  include components/footer.pug

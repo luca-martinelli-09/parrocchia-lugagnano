@@ -20,7 +20,9 @@ html(lang="it")
             .card
               span(class="opacity-80 text-xs")= evento.Giorno
               img(class="w-100" src=evento.File alt=evento.Giorno)
-              a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
+              
+              if evento.Link
+                a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
 
   section
     h2.section-title Ultimi avvisi
@@ -57,6 +59,9 @@ html(lang="it")
 
               div
                 a.button(href=notiziario.Link target="_blank" rel="noopener noreferrer") Scarica
+
+        div(class="mt-5")
+          a(class="link" href="/notiziari") Vai all'archivio di tutti i giornalini parrocchiali
     else
       p(class="mt-5") Nessun notiziario diponibile al download
 

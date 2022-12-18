@@ -547,6 +547,9 @@ video {
 .opacity-80{
   opacity: 0.8;
 }
+.opacity-90{
+  opacity: 0.9;
+}
 
 header{
   position: fixed;
@@ -603,7 +606,7 @@ nav > ul{
     height: 4rem;
     width: auto;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 1.5rem;
     background-color: transparent;
     padding-bottom: 0px;
     color: currentColor;

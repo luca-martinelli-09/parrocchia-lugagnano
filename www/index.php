@@ -2,6 +2,7 @@
 
 require_once('vendor/autoload.php');
 require_once('config.php');
+require_once('utils.php');
 
 $conn = getConn();
 
@@ -13,17 +14,6 @@ if ($getNotifications && $getNotifications->num_rows > 0) {
     $notification["DataScadenza"] = date("d/m/Y", strtotime($notification["DataScadenza"]));
     $notifications[] = $notification;
   }
-}
-
-function toMonth($m) {
-  $monthConverter = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
-
-  return $monthConverter[intval($m) - 1];
-}
-
-function joinMonths($months) {
-  $firsts = array_slice($months, 0, sizeof($months) - 1);
-  return implode(' e ', [implode(', ', $firsts), $months[sizeof($months) - 1]]);
 }
 
 $notiziari = array();
@@ -45,13 +35,13 @@ $eventi = array();
 foreach (array_slice(array_diff(scandir('./files/eventi', 1), array('..', '.')), 0, 3) as $file) {
   $tokens = explode('_', str_replace('.jpg', '', $file));
   $day = $tokens[0];
-  $youtubeURI = $tokens[1];
+  $youtubeURI = sizeof($tokens) >= 1 ? $tokens[1] : NULL;
 
   if (strtotime($day) >= time()) {
     $eventi[] = [
       'File' => './files/eventi/' . $file,
       'Giorno' => (new DateTimeImmutable($day))->format('d/m/Y'),
-      'Link' => 'https://youtu.be/' . $youtubeURI
+      'Link' => $youtubeURI ? 'https://youtu.be/' . $youtubeURI : NULL
     ];
   }
 }
