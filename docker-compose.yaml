@@ -13,7 +13,6 @@ services:
   db:
     container_name: db-pdl
     image: mariadb
-    restart: always
     ports:
       - 3306:3306
     env_file:
@@ -26,7 +25,6 @@ services:
     image: phpmyadmin/phpmyadmin
     ports:
       - 8080:80
-    restart: always
     environment:
       PMA_HOST: db
     depends_on:
