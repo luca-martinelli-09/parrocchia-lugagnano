@@ -57,5 +57,6 @@ $pug->displayFile('index.pug', [
   'iscrizioni' => [
     'Login' => LOGIN_ISCRIZIONI,
     'Register' => REGISTER_ISCRIZIONI
-  ]
+  ],
+  'day' => intval(date("md"))
 ]);

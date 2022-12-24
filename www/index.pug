@@ -24,6 +24,18 @@ html(lang="it")
               if evento.Link
                 a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
 
+  if (day > 1220 && day < 1231) || (day > 11 && day < 110)
+    
+    section
+      h2.section-title Presepe artistico
+
+      .section-content 
+        div(class="mt-5 flex flex-col gap-4")
+          p Guarda il <strong>tour virtuale</strong> del nostro Presepe Artistico, che puoi venire a visitare all'<strong>ingresso della nostra chiesa</strong>!
+
+          div(class="flex gap-2")
+            a.button(href="/presepe") Visita virtuale
+
   section
     h2.section-title Ultimi avvisi
 

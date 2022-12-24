@@ -1,0 +1,30 @@
+doctype html
+html(lang="it")
+
+  include components/header.pug
+
+  section.hero
+    img(src="res/images/presepe/8.jpg" alt="Presepe Artistico")
+    .hero-content
+      h1 Il Presepe Artistico
+  
+  section
+    iframe(width="100%" class="aspect-video" src="https://www.youtube.com/embed/4pyfEQ4s1Og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+  section
+    h2.section-title Galleria
+
+    .section-content
+      div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-5 mt-10")
+        img(src="res/images/presepe/2.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/4.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/5.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/6.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/7.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/8.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/9.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/10.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/11.jpg", alt="Presepe Artistico")
+        img(src="res/images/presepe/12.jpg", alt="Presepe Artistico")
+
+  include components/footer.pug
