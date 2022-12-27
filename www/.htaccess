@@ -3,5 +3,7 @@ RewriteEngine On
 # RewriteCond %{SERVER_PORT} 80
 # RewriteRule ^(.*)$ https://parrocchiadilugagnano.it/$1 [R,L]
 
-RewriteCond %{DOCUMENT_ROOT}/$1.php -f
-RewriteRule (.+) $1.php [L,NC,QSA]
+<If "%{HTTP_HOST} != 'parrocchiadilugagnano.local'">
+  RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+  RewriteRule (.+) $1.php [L,NC,QSA]
+</If>

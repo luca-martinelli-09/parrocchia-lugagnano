@@ -6,7 +6,7 @@ $eventi = array();
 foreach (array_slice(array_diff(scandir('./files/eventi', 1), array('..', '.')), 0, 3) as $file) {
   $tokens = explode('_', str_replace('.jpg', '', $file));
   $day = $tokens[0];
-  $youtubeURI = sizeof($tokens) >= 1 ? $tokens[1] : NULL;
+  $youtubeURI = sizeof($tokens) > 1 ? $tokens[1] : NULL;
 
   $eventi[] = [
     'File' => './files/eventi/' . $file,
