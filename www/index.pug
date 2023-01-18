@@ -24,13 +24,16 @@ html(lang="it")
               if evento.Link
                 a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
 
-  div(class="mt-5 flex flex-col gap-4")
-    .card.bordered
-      h3.title Telepace News 13 gennaio 2023 - Gruppo del Malato
-      p Guarda il servizio realizzato da Telepace sul nostro Gruppo del Malato.
+  section
+      h2.section-title Parlano di noi
+      .section-content 
+        div(class="mt-5 flex flex-col gap-4")
+          .card.bordered
+            h3.title Telepace News 13 gennaio 2023 - Gruppo del Malato
+            p Guarda il servizio realizzato da Telepace sul nostro Gruppo del Malato.
 
-      div
-        a.button(href="https://www.youtube.com/watch?v=1EHpbevJcGA&t=281s" target="_blank" rel="noopener noreferrer") Apri
+            div
+              a.button(href="https://www.youtube.com/watch?v=1EHpbevJcGA&t=281s" target="_blank" rel="noopener noreferrer") Apri
   
   if (day >= 1220 && day <= 1231) || (day >= 101 && day <= 110)
     
