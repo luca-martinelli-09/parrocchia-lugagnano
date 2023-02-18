@@ -1,0 +1,30 @@
+doctype html
+html(lang="it")
+
+  include components/header.pug
+
+  section.hero
+    img(src="res/images/background.webp" alt="Arbor Rendemptionis")
+    .hero-content(class="flex flex-col gap-4")
+      h1 Parrocchia Sant'Anna
+      h5 in
+        span(class="italic ml-2") Lugagnano
+  
+  section
+    h2.section-title Comunicazioni dalla Diocesi
+
+    if comunicazioni.length > 0
+      .section-content
+        div(class="mt-5 flex flex-col gap-4")
+
+          each comunicazione in comunicazioni
+            .card.bordered
+              span.suptitle #{comunicazione.Data}
+              h3.title #{comunicazione.Titolo}
+
+              div
+                a.button(href=comunicazione.Link target="_blank" rel="noopener noreferrer") Scarica
+    else
+      p(class="mt-5") Nessuna comunicazione da elencare
+
+  include components/footer.pug
