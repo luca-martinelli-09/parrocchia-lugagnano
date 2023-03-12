@@ -9,7 +9,7 @@ html(lang="it")
       h1 Parrocchia Sant'Anna
       h5 in
         span(class="italic ml-2") Lugagnano
-  
+
   if eventi.length > 0
     section
       h2.section-title Prossimi eventi
@@ -20,7 +20,7 @@ html(lang="it")
             .card
               span(class="opacity-80 text-xs")= evento.Giorno
               img(class="w-100" src=evento.File alt=evento.Giorno)
-              
+
               if evento.Link
                 a.button(href=evento.Link target="_blank" rel="noopener noreferrer") <ion-icon name="logo-youtube"></ion-icon> Segui in streaming
 
@@ -28,22 +28,22 @@ html(lang="it")
     h2.section-title In primo piano
 
     .section-content
-        div(class="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3")
-          iframe(width="100%" class="aspect-video" src="https://www.youtube.com/embed/z9M6vH61lvI" title="&quot;Laceratevi il cuore e non le vesti&quot;. Il messaggio per l&#39;inizio della Quaresima" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      div(class="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3")
+        iframe(width="100%" class="aspect-video" src="https://www.youtube.com/embed/z9M6vH61lvI" title="&quot;Laceratevi il cuore e non le vesti&quot;. Il messaggio per l&#39;inizio della Quaresima" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 
   section
-      h2.section-title Parlano di noi
-      .section-content 
-        div(class="mt-5 flex flex-col gap-4")
-          .card.bordered
-            h3.title Telepace News 13 gennaio 2023 - Gruppo del Malato
-            p Guarda il servizio realizzato da Telepace sul nostro Gruppo del Malato.
+    h2.section-title Parlano di noi
+    .section-content 
+      div(class="mt-5 flex flex-col gap-4")
+        .card.bordered
+          h3.title Telepace News 13 gennaio 2023 - Gruppo del Malato
+          p Guarda il servizio realizzato da Telepace sul nostro Gruppo del Malato.
 
-            div
-              a.button(href="https://www.youtube.com/watch?v=1EHpbevJcGA&t=281s" target="_blank" rel="noopener noreferrer") Apri
-  
+          div
+            a.button(href="https://www.youtube.com/watch?v=1EHpbevJcGA&t=281s" target="_blank" rel="noopener noreferrer") Apri
+
   if day >= 1220 || day <= 110
-  
+
     section
       h2.section-title Presepe artistico
 
@@ -73,6 +73,21 @@ html(lang="it")
                   a.button(href=avviso.Link target="_blank" rel="noopener noreferrer") Apri
     else
       p(class="mt-5") Nessun avviso per i prossimi giorni
+
+  if altro.length > 0
+    section
+      h2.section-title Altro
+
+      .section-content
+        div(class="mt-5 flex flex-col gap-4")
+
+          each altraComunicazione in altro
+            .card.bordered
+              span.suptitle #{altraComunicazione.Data}
+              h3.title #{altraComunicazione.Titolo}
+
+              div
+                a.button(href=altraComunicazione.Link target="_blank" rel="noopener noreferrer") Scarica
 
   section
     h2.section-title "Sui Tuoi Passi"

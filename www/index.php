@@ -46,6 +46,18 @@ foreach (array_diff(scandir('./files/eventi', 1), array('..', '.')) as $file) {
   }
 }
 
+$altro = array();
+foreach (array_slice(array_diff(scandir('./files/altro', 1), array('..', '.')), 0, 3) as $file) {
+  $data = substr($file, 0, 10);
+  $title = substr($file, 12);
+
+  $altro[] = [
+    'Data' => (new DateTimeImmutable($data))->format('d/m/Y'),
+    'Titolo' => pathinfo($title, PATHINFO_FILENAME),
+    'Link' => './files/altro/' . $file
+  ];
+}
+
 closeConn($conn);
 
 $pug = new Pug();
@@ -54,6 +66,7 @@ $pug->displayFile('index.pug', [
   'avvisi' => $notifications,
   'notiziari' => $notiziari,
   'eventi' => $eventi,
+  'altro' => $altro,
   'iscrizioni' => [
     'Login' => LOGIN_ISCRIZIONI,
     'Register' => REGISTER_ISCRIZIONI
