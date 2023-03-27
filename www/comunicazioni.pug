@@ -13,6 +13,10 @@ html(lang="it")
   section
     h2.section-title Comunicazioni dalla Diocesi
 
+    .section-content
+      div(class="mt-10 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3")
+        iframe(width="100%" class="aspect-video" src="https://www.youtube.com/embed/z9M6vH61lvI" title="&quot;Laceratevi il cuore e non le vesti&quot;. Il messaggio per l&#39;inizio della Quaresima" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
     if comunicazioni.length > 0
       .section-content
         div(class="mt-5 flex flex-col gap-4")
@@ -26,5 +30,16 @@ html(lang="it")
                 a.button(href=comunicazione.Link target="_blank" rel="noopener noreferrer") Scarica
     else
       p(class="mt-5") Nessuna comunicazione da elencare
+  
+  section
+    h2.section-title Parlano di noi
+    .section-content 
+      div(class="mt-5 flex flex-col gap-4")
+        .card.bordered
+          h3.title Telepace News 13 gennaio 2023 - Gruppo del Malato
+          p Guarda il servizio realizzato da Telepace sul nostro Gruppo del Malato.
+
+          div
+            a.button(href="https://www.youtube.com/watch?v=1EHpbevJcGA&t=281s" target="_blank" rel="noopener noreferrer") Apri
 
   include components/footer.pug
